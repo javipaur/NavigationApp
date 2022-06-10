@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Text, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { PaginaTresScreen } from './PaginaTresScreen';
@@ -9,11 +9,17 @@ interface Props extends StackScreenProps<any,any>{};
 
 export const PaginaDosScreen = ({navigation}:Props) => {
 
-  const navigator=useNavigation();
+ useEffect(() => {
+   navigation.setOptions({
+    title:'Hola Mundo!',
+    headerBackTitle:''
+   });
+ }, [])
+ 
 
   return (
     <View style={styles.globalMargin}>
-        <Text>PaginaDosScreen</Text>
+        <Text style={styles.title}>PaginaDosScreen</Text>
 
         <Button
         title='Ir Pagina 3'

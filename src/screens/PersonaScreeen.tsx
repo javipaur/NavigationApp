@@ -3,17 +3,15 @@ import React from 'react'
 import { Button, Text, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 
-
 interface Props extends StackScreenProps<any,any>{};
 
-
-export const PaginaUnoScreen = ({navigation}:Props) => {
-
+export const PersonaScreeen = ({navigation}:Props) => {
   return (
     <View style={styles.globalMargin}>
-        <Text style={styles.title}>PaginaUnoScreen</Text>
-        <Button title='ir Pagina 2'
-        onPress={()=>{navigation.navigate('PaginaDosScreen')}}></Button>
-    </View>
+        <Text style={styles.title}>PersonaScreeen</Text>
+
+        <Button title='ir Persona' onPress={()=>{navigation.navigate('PersonaScreeen')}}
+        ></Button>
+        </View>
   )
 }
